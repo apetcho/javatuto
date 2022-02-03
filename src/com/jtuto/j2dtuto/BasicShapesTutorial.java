@@ -39,12 +39,18 @@ class Surface extends JPanel {
 }
 
 // ***
-public class BasicShapesTutorial {
+public class BasicShapesTutorial extends JFrame {
     public BasicShapesTutorial() {
         initUI();
     }
 
     private void initUI() {
+        add(new Surface());
+
+        setTitle("Basic Shapes");
+        setSize(350, 250);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
