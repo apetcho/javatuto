@@ -30,6 +30,15 @@ class TextureApp extends JPanel {
 
     // ---
     private void loadImages() {
+        try {
+            slate = ImageIO.read(new File("../images/slate.png"));
+            java = ImageIO.read(new File("../images/java.png"));
+            pane = ImageIO.read(new File("../images/pane.png"));
+
+        } catch (IOException ex) {
+            Logger.getLogger(TextureApp.class.getName()).log(
+                    Level.SEVERE, null, ex);
+        }
     }
 
     // ---
