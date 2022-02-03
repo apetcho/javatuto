@@ -41,6 +41,7 @@ class Surface extends JPanel {
 // ***
 public class BasicShapesTutorial {
     public BasicShapesTutorial() {
+        initUI();
     }
 
     private void initUI() {
