@@ -23,6 +23,9 @@ class TextureApp extends JPanel {
     private TexturePaint javatp;
     private TexturePaint panetp;
 
+    private final String IMPATH = "/Users/oriprox/Documents/cs/java/" +
+            "practice/javatuto/images/";
+
     // ---
     public TextureApp() {
         loadImages();
@@ -31,9 +34,9 @@ class TextureApp extends JPanel {
     // ---
     private void loadImages() {
         try {
-            slate = ImageIO.read(new File("../images/slate.png"));
-            java = ImageIO.read(new File("../images/java.png"));
-            pane = ImageIO.read(new File("../images/pane.png"));
+            slate = ImageIO.read(new File(IMPATH + "slate.png"));
+            java = ImageIO.read(new File(IMPATH + "java.png"));
+            pane = ImageIO.read(new File(IMPATH + "pane.png"));
 
         } catch (IOException ex) {
             Logger.getLogger(TextureApp.class.getName()).log(
