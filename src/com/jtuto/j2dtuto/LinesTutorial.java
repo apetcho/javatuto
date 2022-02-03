@@ -29,9 +29,15 @@ class Surface extends JPanel {
 public class LinesTutorial extends JFrame {
 
     public LinesTutorial() {
+        initUI();
     }
 
     private void initUI() {
+        add(new Surface());
+        setTitle("Lines");
+        setSize(350, 250);
+        setLocation(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
