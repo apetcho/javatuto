@@ -5,8 +5,6 @@ import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-import java.util.spi.ResourceBundleProvider;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -58,5 +56,32 @@ class Surface extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         doDrawing(g);
+    }
+}
+
+// ******
+public class CapsTutorial extends JFrame {
+    public CapsTutorial() {
+        initUI();
+    }
+
+    //
+    private void initUI() {
+        add(new Surface());
+        setTitle("Caps");
+        setSize(280, 270);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    // ---
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                CapsTutorial app = new CapsTutorial();
+                app.setVisible(true);
+            }
+        });
     }
 }
