@@ -64,6 +64,7 @@ class Surface extends JPanel {
 // ******
 public class BasicStrokesTutorial extends JFrame {
     public BasicStrokesTutorial() {
+        initUI();
     }
 
     private void initUI() {
