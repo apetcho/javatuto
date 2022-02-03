@@ -54,6 +54,12 @@ public class BasicShapesTutorial extends JFrame {
     }
 
     public static void main(String[] args) {
-
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                BasicShapesTutorial app = new BasicShapesTutorial();
+                app.setVisible(true);
+            }
+        });
     }
 }
