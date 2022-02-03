@@ -76,6 +76,11 @@ public class TextureTutorial extends JFrame {
 
     // ---
     private void initUI() {
+        add(new TextureApp());
+        setTitle("Textures");
+        setSize(360, 120);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     // ---
