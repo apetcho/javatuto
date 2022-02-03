@@ -71,6 +71,7 @@ class TextureApp extends JPanel {
 // *****
 public class TextureTutorial extends JFrame {
     public TextureTutorial() {
+        initUI();
     }
 
     // ---
