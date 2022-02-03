@@ -55,6 +55,12 @@ public class GradientsTutorial extends JFrame {
     }
 
     private void initUI() {
+
+        add(new GradientsApp());
+        setTitle("Gradients");
+        setSize(350, 350);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
