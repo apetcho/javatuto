@@ -43,6 +43,21 @@ class TextureApp extends JPanel {
 
     // ---
     private void doDrawing(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g.create();
+        slatetp = new TexturePaint(slate, new Rectangle(0, 0, 90, 60));
+        javatp = new TexturePaint(java, new Rectangle(0, 0, 90, 60));
+        panetp = new TexturePaint(pane, new Rectangle(0, 0, 90, 60));
+
+        g2d.setPaint(slatetp);
+        g2d.fillRect(10, 15, 90, 60);
+
+        g2d.setPaint(javatp);
+        g2d.fillRect(130, 15, 90, 60);
+
+        g2d.setPaint(panetp);
+        g2d.fillRect(250, 15, 90, 60);
+
+        g2d.dispose();
     }
 
     // ---
