@@ -13,7 +13,7 @@ class Surface extends JPanel {
         Graphics2D g2d = (Graphics2D) g;
 
         g2d.drawLine(30, 30, 200, 30);
-        g2d.drawLine(200, 300, 300, 300);
+        g2d.drawLine(200, 30, 30, 200);
         g2d.drawLine(30, 200, 200, 200);
         g2d.drawLine(200, 200, 30, 30);
     }
@@ -36,10 +36,17 @@ public class LinesTutorial extends JFrame {
         add(new Surface());
         setTitle("Lines");
         setSize(350, 250);
-        setLocation(null);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                LinesTutorial app = new LinesTutorial();
+                app.setVisible(true);
+            }
+        });
     }
 }
