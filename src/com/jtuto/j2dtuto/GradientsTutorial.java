@@ -51,6 +51,7 @@ class GradientsApp extends JPanel {
 // *****
 public class GradientsTutorial extends JFrame {
     public GradientsTutorial() {
+        initUI();
     }
 
     private void initUI() {
