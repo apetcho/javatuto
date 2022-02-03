@@ -51,9 +51,15 @@ class AreaApp extends JPanel {
 // ****
 public class AreaExample extends JFrame {
     public AreaExample() {
+        initUI();
     }
 
     private void initUI() {
+        add(new AreaApp());
+        setTitle("Areas Tutorial");
+        setSize(450, 200);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
