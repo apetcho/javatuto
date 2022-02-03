@@ -64,6 +64,12 @@ public class GradientsTutorial extends JFrame {
     }
 
     public static void main(String[] args) {
-
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                GradientsTutorial app = new GradientsTutorial();
+                app.setVisible(true);
+            }
+        });
     }
 }
