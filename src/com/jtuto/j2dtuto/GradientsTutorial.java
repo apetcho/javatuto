@@ -43,6 +43,8 @@ class GradientsApp extends JPanel {
 
     @Override
     public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        doDrawing(g);
     }
 }
 
