@@ -37,7 +37,7 @@ class Surface extends JPanel {
                 BasicStroke.JOIN_ROUND, 1.0f, dash3, 2.f);
 
         BasicStroke bs4 = new BasicStroke(1, BasicStroke.CAP_BUTT,
-                BasicStroke.JOIN_ROUND, 1.0f, dash1, 2.f);
+                BasicStroke.JOIN_ROUND, 1.0f, dash4, 2.f);
 
         g2d.setStroke(bs1);
         g2d.drawLine(20, 80, 250, 80);
@@ -56,6 +56,8 @@ class Surface extends JPanel {
 
     @Override
     public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        doDrawing(g);
     }
 }
 
