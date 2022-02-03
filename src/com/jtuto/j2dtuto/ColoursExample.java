@@ -49,6 +49,7 @@ class ColourApp extends JPanel {
 // ******
 public class ColoursExample extends JFrame {
     public ColoursExample() {
+        initUI();
     }
 
     private void initUI() {
