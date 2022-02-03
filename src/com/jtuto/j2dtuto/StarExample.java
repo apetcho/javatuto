@@ -51,14 +51,26 @@ class StarApp extends JPanel {
 }
 
 // ****
-public class StarExample extends JPanel {
+public class StarExample extends JFrame {
     public StarExample() {
+        initUI();
     }
 
     private void initUI() {
+        add(new StarApp());
+        setTitle("Star");
+        setSize(350, 250);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
-
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                StarExample app = new StarExample();
+                app.setVisible(true);
+            }
+        });
     }
 }
