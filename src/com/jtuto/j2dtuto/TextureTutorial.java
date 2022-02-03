@@ -85,6 +85,12 @@ public class TextureTutorial extends JFrame {
 
     // ---
     public static void main(String[] args) {
-
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                TextureTutorial app = new TextureTutorial();
+                app.setVisible(true);
+            }
+        });
     }
 }
