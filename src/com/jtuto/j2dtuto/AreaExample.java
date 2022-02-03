@@ -63,6 +63,12 @@ public class AreaExample extends JFrame {
     }
 
     public static void main(String[] args) {
-
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                AreaExample app = new AreaExample();
+                app.setVisible(true);
+            }
+        });
     }
 }
