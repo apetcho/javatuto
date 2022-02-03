@@ -38,7 +38,6 @@ class Surface extends JPanel {
         BasicStroke bs3 = new BasicStroke(8, BasicStroke.CAP_SQUARE,
                 BasicStroke.JOIN_BEVEL);
         g2d.setStroke(bs3);
-        y = 80;
         g2d.drawLine(20, y, 250, y);
 
         BasicStroke bs4 = new BasicStroke();
