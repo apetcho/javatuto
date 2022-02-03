@@ -68,6 +68,12 @@ public class BasicStrokesTutorial extends JFrame {
     }
 
     private void initUI() {
+        add(new Surface());
+
+        setTitle("Basic strokes");
+        setSize(280, 270);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     //
