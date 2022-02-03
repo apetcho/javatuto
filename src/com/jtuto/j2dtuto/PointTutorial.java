@@ -16,13 +16,20 @@ import javax.swing.Timer;
 // ****
 class Surface extends JPanel implements ActionListener {
     private final int DELAY = 150;
+
+    /**
+     * Timer object used to create animations. It fires ActionEvents at the
+     * specified interval.
+     */
     private Timer timer;
 
     public Surface() {
         initTimer();
     }
 
-    // --
+    /**
+     * Initiatialize the timer used to draw points in a cycle.
+     */
     private void initTimer() {
         timer = new Timer(DELAY, this);
         timer.start();
@@ -36,10 +43,14 @@ class Surface extends JPanel implements ActionListener {
     // ---
     private void doDrawing(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
+        // Paint the points in blue color
         g2d.setPaint(Color.blue);
 
+        // Get the width and height of this panel
         int width = getWidth();
         int height = getHeight();
+
+        // Random number generator engine
         Random r = new Random();
         for (int i = 0; i < 2000; i++) {
             int x = Math.abs(r.nextInt()) % width;
@@ -54,7 +65,10 @@ class Surface extends JPanel implements ActionListener {
         doDrawing(g);
     }
 
-    //
+    /**
+     * For each action event, we call repaint() method to cause the whole client
+     * to be redrawn.
+     */
     @Override
     public void actionPerformed(ActionEvent event) {
         repaint();
@@ -71,6 +85,10 @@ public class PointTutorial extends JFrame {
         final Surface surface = new Surface();
         add(surface);
 
+        /**
+         * Retrieve the timer when the window is about to close. If not done
+         * explicitly, it may hold resources indefinitely.
+         */
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent event) {
