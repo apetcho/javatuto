@@ -61,6 +61,12 @@ public class ColoursExample extends JFrame {
     }
 
     public static void main(String[] args) {
-
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                ColoursExample app = new ColoursExample();
+                app.setVisible(true);
+            }
+        });
     }
 }
