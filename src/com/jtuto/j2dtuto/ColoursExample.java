@@ -53,6 +53,11 @@ public class ColoursExample extends JFrame {
     }
 
     private void initUI() {
+        add(new ColourApp());
+        setTitle("Colours");
+        setSize(360, 300);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
