@@ -15,9 +15,18 @@ import javax.swing.Timer;
 
 // ---
 class Application extends JPanel implements ActionListener {
-    //
+    // ****
+    private Image sun;
+    private Image cloud;
+    private Timer timer;
+    private float alpha = 1.0f;
+
+    private final int DELAY = 600;
+
     // ****
     public Application() {
+        loadImages();
+        initTimer();
     }
 
     // ****
