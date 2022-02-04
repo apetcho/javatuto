@@ -24,6 +24,9 @@ class Application extends JPanel implements ActionListener {
     private final int INITIAL_DELAY = 500;
 
     public Application() {
+        loadImage();
+        setApplicationSize();
+        initTimer();
     }
 
     private void loadImage() {
