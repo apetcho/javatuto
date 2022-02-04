@@ -82,6 +82,8 @@ class Application extends JPanel implements ActionListener {
     // ****
     @Override
     public void actionPerformed(ActionEvent event) {
+        step();
+        repaint();
     }
 }
 
