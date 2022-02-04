@@ -83,9 +83,15 @@ class Application extends JPanel implements ActionListener {
 // ---
 public class FadeOutExample extends JFrame {
     public FadeOutExample() {
+        initUI();
     }
 
     private void initUI() {
+        add(new Application());
+        pack();
+        setTitle("Fade Out");
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     //
