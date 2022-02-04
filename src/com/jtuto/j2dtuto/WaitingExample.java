@@ -47,6 +47,34 @@ class Application extends JPanel implements ActionListener {
 
     // ---
     private void doDrawing(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g.create();
+        g2d.setRenderingHint(
+                RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+        g2d.setRenderingHint(
+                RenderingHints.KEY_RENDERING,
+                RenderingHints.VALUE_RENDER_QUALITY);
+
+        //
+        int width = getWidth();
+        int height = getHeight();
+
+        g2d.setStroke(new BasicStroke(
+                STROKE_WIDTH,
+                BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+        g2d.translate(width / 2, height / 2);
+
+        for (int i = 0; i < NUMER_OF_LINES; i++) {
+            float alpha = (float) trs[count % NUMER_OF_LINES][i];
+            AlphaComposite acomp = AlphaComposite.getInstance(
+                    AlphaComposite.SRC_OVER, alpha);
+            g2d.setComposite(acomp);
+
+            g2d.rotate(Math.PI / 4.f);
+            g2d.drawLine(0, -10, 0, -40);
+        }
+
+        g2d.dispose();
     }
 
     // ---
