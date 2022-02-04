@@ -92,6 +92,11 @@ public class SunAndCloudExample extends JFrame {
 
     // *****
     public SunAndCloudExample() {
+        initUI();
+        setTitle("Sun and Cloud");
+        setSize(300, 210);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     // *****
