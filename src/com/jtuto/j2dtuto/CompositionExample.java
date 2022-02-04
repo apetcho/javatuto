@@ -60,6 +60,12 @@ public class CompositionExample extends JFrame {
     }
 
     public static void main(String[] args) {
-
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                CompositionExample app = new CompositionExample();
+                app.setVisible(true);
+            }
+        });
     }
 }
