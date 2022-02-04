@@ -16,9 +16,26 @@ import javax.swing.Timer;
 class Application extends JPanel implements ActionListener {
 
     private int count;
+    private Timer timer;
+    private final int INITIAL_DELAY = 200;
+    private final int DELAY = 80;
+    private final int NUMER_OF_LINES = 8;
+    private final int STROKE_WIDTH = 3;
+
+    private final double[][] trs = {
+            { 0.0, 0.15, 0.30, 0.50, 0.65, 0.80, 0.90, 1.0 },
+            { 1.0, 0.0, 0.15, 0.30, 0.50, 0.65, 0.80, 0.90 },
+            { 0.90, 1.0, 0.0, 0.15, 0.3, 0.5, 0.65, 0.80 },
+            { 0.80, 0.90, 1.0, 0.0, 0.15, 0.30, 0.50, 0.065 },
+            { 0.65, 0.80, 0.90, 1.0, 0.0, 0.15, 0.30, 0.5 },
+            { 0.50, 0.65, 0.80, 0.90, 1.0, 0.0, 0.15, 0.3 },
+            { 0.30, 0.50, 0.65, 0.80, 0.90, 1.0, 0.0, 0.15 },
+            { 0.15, 0.30, 0.50, 0.65, 0.80, 0.90, 1.0, 0.0 }
+    };
 
     // ---
     public Application() {
+        initTimer();
     }
 
     // ---
