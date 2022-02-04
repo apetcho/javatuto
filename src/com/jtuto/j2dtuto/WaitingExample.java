@@ -5,6 +5,7 @@ import java.awt.BasicStroke;
 import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Dimension;
 import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -96,10 +97,16 @@ class Application extends JPanel implements ActionListener {
 public class WaitingExample extends JFrame {
 
     public WaitingExample() {
+        initUI();
     }
 
     // ---
     private void initUI() {
+        add(new Application());
+        setTitle("Waiting");
+        setSize(new Dimension(300, 200));
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     // ---
