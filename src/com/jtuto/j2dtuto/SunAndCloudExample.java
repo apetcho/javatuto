@@ -45,6 +45,23 @@ class Application extends JPanel implements ActionListener {
 
     // ****
     private void doDrawing(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g.create();
+
+        BufferedImage bufimg = new BufferedImage(
+                220, 140, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D gbi = bufimg.createGraphics();
+
+        AlphaComposite ac = AlphaComposite.getInstance(
+                AlphaComposite.SRC_OVER, alpha);
+
+        gbi.drawImage(sun, 40, 30, null);
+        gbi.setComposite(ac);
+        gbi.drawImage(cloud, 20, 20, null);
+
+        g2d.drawImage(bufimg, 20, 20, null);
+
+        gbi.dispose();
+        g2d.dispose();
     }
 
     @Override
