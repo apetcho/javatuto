@@ -39,5 +39,10 @@ public class TransparentRectangleExample extends JFrame {
     }
 
     private void initUI() {
+        add(new Application());
+        setTitle("Transparent rectangles");
+        setSize(590, 120);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
