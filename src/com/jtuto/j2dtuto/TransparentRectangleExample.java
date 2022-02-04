@@ -45,4 +45,14 @@ public class TransparentRectangleExample extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                TransparentRectangleExample app = new TransparentRectangleExample();
+                app.setVisible(true);
+            }
+        });
+    }
 }
