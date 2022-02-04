@@ -93,6 +93,10 @@ public class SunAndCloudExample extends JFrame {
     // *****
     public SunAndCloudExample() {
         initUI();
+    }
+
+    // *****
+    private void initUI() {
         setTitle("Sun and Cloud");
         setSize(300, 210);
         setLocationRelativeTo(null);
@@ -100,11 +104,13 @@ public class SunAndCloudExample extends JFrame {
     }
 
     // *****
-    private void initUI() {
-    }
-
-    // *****
     public static void main(String[] args) {
-
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                SunAndCloudExample app = new SunAndCloudExample();
+                app.setVisible(true);
+            }
+        });
     }
 }
