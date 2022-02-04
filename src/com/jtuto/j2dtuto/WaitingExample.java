@@ -40,6 +40,9 @@ class Application extends JPanel implements ActionListener {
 
     // ---
     private void initTimer() {
+        timer = new Timer(DELAY, this);
+        timer.setInitialDelay(INITIAL_DELAY);
+        timer.start();
     }
 
     // ---
