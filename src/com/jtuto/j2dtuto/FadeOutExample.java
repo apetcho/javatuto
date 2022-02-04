@@ -23,6 +23,9 @@ class Application extends JPanel implements ActionListener {
     private final int DELAY = 40;
     private final int INITIAL_DELAY = 500;
 
+    private final String IMPATH = "/Users/oriprox/Documents/cs/" +
+            "java/practice/javatuto/";
+
     public Application() {
         loadImage();
         setApplicationSize();
@@ -30,9 +33,11 @@ class Application extends JPanel implements ActionListener {
     }
 
     private void loadImage() {
+        img = new ImageIcon(IMPATH + "mushrooms.jpg").getImage();
     }
 
     private void setApplicationSize() {
+
     }
 
     private void initTimer() {
