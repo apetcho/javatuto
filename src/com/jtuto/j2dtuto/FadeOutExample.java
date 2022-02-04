@@ -96,6 +96,12 @@ public class FadeOutExample extends JFrame {
 
     //
     public static void main(String[] args) {
-
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                FadeOutExample app = new FadeOutExample();
+                app.setVisible(true);
+            }
+        });
     }
 }
