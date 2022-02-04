@@ -35,6 +35,7 @@ class Application extends JPanel {
 //
 public class TransparentRectangleExample extends JFrame {
     public TransparentRectangleExample() {
+        initUI();
     }
 
     private void initUI() {
