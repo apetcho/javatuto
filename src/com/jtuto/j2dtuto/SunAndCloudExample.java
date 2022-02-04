@@ -31,6 +31,10 @@ class Application extends JPanel implements ActionListener {
 
     // ****
     private void loadImages() {
+        final String IMPATH = "/Users/oriprox/Documents/cs/"
+                + "java/practice/javatuto/images/";
+        sun = new ImageIcon(IMPATH + "sun.png").getImage();
+        cloud = new ImageIcon(IMPATH + "cloud.png").getImage();
     }
 
     // ****
