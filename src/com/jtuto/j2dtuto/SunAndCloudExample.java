@@ -72,6 +72,11 @@ class Application extends JPanel implements ActionListener {
 
     // ****
     private void step() {
+        alpha = -0.1f;
+        if (alpha <= 0.0f) {
+            alpha = 0.0f;
+            timer.stop();
+        }
     }
 
     // ****
