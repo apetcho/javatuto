@@ -49,6 +49,14 @@ class Application extends JPanel implements ActionListener {
     }
 
     private void doDrawing(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g.create();
+
+        AlphaComposite acom = AlphaComposite.getInstance(
+                AlphaComposite.SRC_OVER, alpha);
+        g2d.setComposite(acom);
+        g2d.drawImage(img, 0, 0, null);
+
+        g2d.dispose();
     }
 
     @Override
