@@ -37,7 +37,9 @@ class Application extends JPanel implements ActionListener {
     }
 
     private void setApplicationSize() {
-
+        int h = img.getHeight(this);
+        int w = img.getWidth(this);
+        setPreferredSize(new Dimension(w, h));
     }
 
     private void initTimer() {
