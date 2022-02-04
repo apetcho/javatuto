@@ -52,6 +52,11 @@ class Application extends JPanel {
 // ---
 public class CompositionExample extends JFrame {
     public CompositionExample() {
+        add(new Application());
+        setTitle("Composition");
+        setSize(400, 120);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
